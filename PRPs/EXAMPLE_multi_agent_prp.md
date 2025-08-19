@@ -77,7 +77,9 @@ A CLI-based application where:
 │   └── templates/
 │       └── prp_base.md
 ├── INITIAL.md
-├── CLAUDE.md
+├── .roo/
+│   └── rules-code/
+│       └── rules.md
 └── requirements.txt
 ```
 

@@ -33,7 +33,7 @@ def get_template_files() -> List[Tuple[str, str]]:
     
     # Core template files
     core_files = [
-        "CLAUDE.md",
+        ".roo/rules-code/rules.md",
         "README.md",
     ]
     
@@ -45,10 +45,10 @@ def get_template_files() -> List[Tuple[str, str]]:
             files_to_copy.append((str(source_path), target_name))
     
     # Claude commands directory
-    commands_dir = template_root / ".claude" / "commands"
+    commands_dir = template_root / ".roo" / "commands"
     if commands_dir.exists():
         for file in commands_dir.glob("*.md"):
-            rel_path = f".claude/commands/{file.name}"
+            rel_path = f".roo/commands/{file.name}"
             files_to_copy.append((str(file), rel_path))
     
     # PRPs directory
@@ -135,10 +135,10 @@ def validate_template_integrity(target_dir: Path) -> bool:
         True if template appears complete, False otherwise
     """
     essential_files = [
-        "CLAUDE.md",
+        ".roo/rules-code/rules.md",
         "README_TEMPLATE.md",
-        ".claude/commands/generate-pydantic-ai-prp.md",
-        ".claude/commands/execute-pydantic-ai-prp.md",
+        ".roo/commands/generate-pydantic-ai-prp.md",
+        ".roo/commands/execute-pydantic-ai-prp.md",
         "PRPs/templates/prp_pydantic_ai_base.md",
         "PRPs/INITIAL.md",
         "examples/basic_chat_agent/agent.py",
@@ -188,7 +188,7 @@ def print_next_steps(target_dir: Path) -> None:
 
 5. Read the documentation:
    # Check README.md for complete usage guide
-   # Check CLAUDE.md for PydanticAI development rules
+   # Check .roo/rules-code/rules.md for PydanticAI development rules
 
 🔗 Useful Resources:
    - PydanticAI Docs: https://ai.pydantic.dev/

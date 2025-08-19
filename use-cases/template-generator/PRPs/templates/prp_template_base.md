@@ -21,7 +21,7 @@ Template optimized for AI agents to generate complete context engineering templa
 
 Generate a complete context engineering template package for **[TARGET_TECHNOLOGY]** that includes:
 
-- Domain-specific CLAUDE.md implementation guide
+- Domain-specific .roo/rules-code/rules.md implementation guide
 - Specialized PRP generation and execution commands
 - Technology-appropriate base PRP template
 - Comprehensive examples and documentation
@@ -42,10 +42,12 @@ Generate a complete context engineering template package for **[TARGET_TECHNOLOG
 **Complete Directory Structure:**
 ```
 use-cases/{technology-name}/
-├── CLAUDE.md                      # Domain implementation guide
-├── .claude/commands/
-│   ├── generate-{technology}-prp.md  # Domain PRP generation
-│   └── execute-{technology}-prp.md   # Domain PRP execution  
+├── .roo/
+│   ├── rules-code/
+│   │   └── rules.md                            # Domain implementation guide
+│   ├── commands/
+│   │   ├── generate-{technology}-prp.md        # Domain PRP generation
+│   │   └── execute-{technology}-prp.md         # Domain PRP execution
 ├── PRPs/
 │   ├── templates/
 │   │   └── prp_{technology}_base.md  # Domain base PRP template
@@ -89,20 +91,20 @@ use-cases/{technology-name}/
 - file: ../../../README.md
   why: Core context engineering principles and workflow to adapt
 
-- file: ../../../.claude/commands/generate-prp.md
+- file: ../../../.roo/commands/generate-prp.md
   why: Base PRP generation patterns to specialize for domain
 
-- file: ../../../.claude/commands/execute-prp.md  
+- file: ../../../.roo/commands/execute-prp.md  
   why: Base PRP execution patterns to adapt for technology
 
 - file: ../../../PRPs/templates/prp_base.md
   why: Base PRP template structure to specialize for domain
 
 # MCP SERVER EXAMPLE - Reference implementation of domain specialization
-- file: ../mcp-server/CLAUDE.md
+- file: ../mcp-server/.roo/rules-code/rules.md
   why: Example of domain-specific implementation guide patterns
 
-- file: ../mcp-server/.claude/commands/prp-mcp-create.md
+- file: ../mcp-server/.roo/commands/prp-mcp-create.md
   why: Example of specialized PRP generation command
 
 - file: ../mcp-server/PRPs/templates/prp_mcp_base.md
@@ -130,13 +132,17 @@ use-cases/{technology-name}/
 ```bash
 # Base framework structure to extend
 context-engineering-intro/
-├── README.md                    # Core principles to adapt
-├── .claude/commands/            # Base commands to specialize
-├── PRPs/templates/prp_base.md   # Base template to extend
-├── CLAUDE.md                    # Base rules to inherit
+├── README.md                                # Core principles to adapt
+├── .roo/
+│   ├── commands/                            # Base commands to specialize
+│   └── rules-code/
+│       └── rules.md                         # Base rules to inherit
+├── PRPs/
+│   └── templates/
+│       └── prp_base.md                      # Base template to extend
 └── use-cases/
-    ├── mcp-server/              # Reference specialization example
-    └── template-generator/      # This meta-template system
+    ├── mcp-server/                          # Reference specialization example
+    └── template-generator/                  # This meta-template system
 ```
 
 ### Target Technology Analysis Requirements
@@ -251,7 +257,7 @@ Research Task 3 - Best Practices Investigation (WEB SEARCH REQUIRED):
 Research Task 4 - Template Package Structure Planning:
   PLAN how to create context engineering template for this technology:
     - How to adapt PRP framework for this specific technology
-    - What domain-specific CLAUDE.md rules are needed
+    - What domain-specific .roo/rules-code/rules.md rules are needed
     - What validation loops are appropriate for this framework
     - What examples and documentation should be included
 ```
@@ -264,12 +270,12 @@ Create complete context engineering template package based on web research findi
 Generation Task 1 - Create Template Directory Structure:
   CREATE complete use case directory structure:
     - use-cases/{technology-name}/
-    - .claude/commands/ subdirectory  
+    - .roo/commands/ subdirectory  
     - PRPs/templates/ subdirectory
     - examples/ subdirectory
     - All other required subdirectories per template package requirements
 
-Generation Task 2 - Generate Domain-Specific CLAUDE.md:
+Generation Task 2 - Generate Domain-Specific .roo/rules-code/rules.md:
   CREATE technology-specific global rules file:
     - Technology-specific tooling and package management commands
     - Framework architectural patterns and conventions from web research
@@ -301,7 +307,7 @@ Generation Task 6 - Create Template Copy Script:
   CREATE Python script for template deployment:
     - copy_template.py script that accepts target directory argument
     - Copies entire template directory structure to specified location
-    - Includes all files: CLAUDE.md, commands, PRPs, examples, etc.
+    - Includes all files: .roo/rules-code/rules.md, commands, PRPs, examples, etc.
     - Handles directory creation and file copying with error handling
     - Simple command-line interface for easy usage
 
@@ -322,7 +328,7 @@ Generation Task 7 - Generate Comprehensive README:
 # Essential copy script functionality:
 # 1. Accept target directory as command line argument
 # 2. Copy entire template directory structure to target location
-# 3. Include ALL files: CLAUDE.md, .claude/, PRPs/, examples/, README.md
+# 3. Include ALL files: .roo/rules-code/rules.md, .roo/, PRPs/, examples/, README.md
 # 4. Handle directory creation and error handling
 # 5. Provide clear success feedback with next steps
 # 6. Simple usage: python copy_template.py /path/to/target
@@ -412,7 +418,7 @@ TEMPLATE_STRUCTURE:
 ```bash
 # CRITICAL: Verify complete template package structure
 find use-cases/{technology-name} -type f | sort
-ls -la use-cases/{technology-name}/.claude/commands/
+ls -la use-cases/{technology-name}/.roo/commands/
 ls -la use-cases/{technology-name}/PRPs/templates/
 
 # Verify copy script exists and is functional
@@ -432,7 +438,7 @@ grep -r "{technology}" use-cases/{technology-name}/ | wc -l
 
 # Check for technology-specific patterns
 grep -r "framework-specific-pattern" use-cases/{technology-name}/
-grep -r "validation" use-cases/{technology-name}/.claude/commands/
+grep -r "validation" use-cases/{technology-name}/.roo/commands/
 
 # Expected: No placeholder content, technology patterns present
 # If issues: Research and add proper domain-specific content
@@ -460,8 +466,8 @@ grep -r "{technology-specific}" . | wc -l  # Should have specializations
 
 ```bash
 # Verify integration with base context engineering framework
-diff -r ../../.claude/commands/ .claude/commands/ | head -20
-diff ../../CLAUDE.md CLAUDE.md | head -20
+diff -r ../../.roo/commands/ .roo/commands/ | head -20
+diff ../../.roo/rules-code/rules.md .roo/rules-code/rules.md | head -20
 
 # Test template produces working results
 cd examples/
@@ -476,7 +482,7 @@ cd examples/
 ### Template Package Completeness
 
 - [ ] Complete directory structure: `tree use-cases/{technology-name}`
-- [ ] All required files present: CLAUDE.md, commands, base PRP, examples
+- [ ] All required files present: .roo/rules-code/rules.md, commands, base PRP, examples
 - [ ] Copy script present: `copy_template.py` with proper functionality
 - [ ] README comprehensive: Includes copy script instructions and PRP workflow
 - [ ] Domain-specific content: Technology patterns accurately represented

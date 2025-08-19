@@ -100,8 +100,10 @@ wrangler types         # Generate TypeScript types from Worker configuration
 ├── wrangler-simple.jsonc       # Simple math example configuration
 ├── package.json                # npm dependencies & scripts
 ├── tsconfig.json               # TypeScript configuration
-├── worker-configuration.d.ts   # Generated Cloudflare types
-└── CLAUDE.md                   # This implementation guide
+├── .roo/                        # Product Requirement Prompts
+│   └── rules-code/
+│       └── rules.md                   # This implementation guide
+└── worker-configuration.d.ts   # Generated Cloudflare types
 ```
 
 ### Key File Purposes (ALWAYS ADD NEW FILES HERE)
