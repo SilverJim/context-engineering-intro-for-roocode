@@ -84,7 +84,7 @@ This implements the complete agent based on the PRP, including:
 pydantic-ai/
 ├── copy_template.py                    # Template deployment script
 ├── .roo/
-│   ├── rules-code/
+│   ├── rules/
 │   │   └── rules.md                    # Pydantic AI global development rules
 │   ├── commands/
 │   │   ├── generate-pydantic-ai-prp.md # PRP generation for agents

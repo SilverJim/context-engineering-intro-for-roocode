@@ -12,13 +12,13 @@ git clone https://github.com/SilverJim/context-engineering-intro-for-roocode.git
 cd Context-Engineering-Intro
 
 # 2. Set up your project rules (optional - template provided)
-# Edit .roo/rules-code/rules.md to add your project-specific guidelines
+# Edit .roo/rules/rules.md to add your project-specific guidelines
 
 # 3. Add examples (highly recommended)
 # Place relevant code examples in the examples/ folder
 
 # 4. Create your initial feature request
-# Edit INITIAL.md with your feature requirements (INITIAL.md and .roo/rules-code/rules.md can also be generated using command /auto-initial <arg:goals> )
+# Edit INITIAL.md with your feature requirements (INITIAL.md and .roo/rules/rules.md can also be generated using command /auto-initial <arg:goals> )
 
 # 5. Generate a comprehensive PRP (Product Requirements Prompt)
 # In RooCode, run:
@@ -70,7 +70,7 @@ context-engineering-intro/
 │   ├── commands/
 │   │   ├── generate-prp.md    # Generates comprehensive PRPs
 │   │   └── execute-prp.md     # Executes PRPs to implement features
-│   └── rules-code/
+│   └── rules/
 │       └── rules.md                 # Global rules for AI assistant
 ├── PRPs/
 │   ├── templates/
@@ -86,9 +86,9 @@ This template doesn't focus on RAG and tools with context engineering because I 
 
 ## Step-by-Step Guide
 
-### 1. Set Up Global Rules (.roo/rules-code/rules.md)
+### 1. Set Up Global Rules (.roo/rules/rules.md)
 
-The `.roo/rules-code/rules.md` file contains project-wide rules that the AI assistant will follow in every conversation. The template includes:
+The `.roo/rules/rules.md` file contains project-wide rules that the AI assistant will follow in every conversation. The template includes:
 
 - **Project awareness**: Reading planning docs, checking tasks
 - **Code structure**: File size limits, module organization
@@ -285,7 +285,7 @@ examples/
 - Add MCP server resources
 - Reference specific documentation sections
 
-### 5. Customize .roo/rules-code/rules.md
+### 5. Customize .roo/rules/rules.md
 - Add your conventions
 - Include project-specific rules
 - Define coding standards

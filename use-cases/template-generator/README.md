@@ -23,7 +23,7 @@ This meta-template generates complete context engineering template packages with
 ```
 use-cases/{technology-name}/
 ├── .roo/
-│   ├── rules-code/
+│   ├── rules/
 │   │   └── rules.md                  # Technology-specific global rules
 │   ├── commands/
 │   │   ├── generate-{tech}-prp.md   # Domain PRP generation
@@ -100,7 +100,7 @@ This will:
 
 This will:
 - Create complete template package directory structure
-- Generate technology-specific .roo/rules-code/rules.md with global rules
+- Generate technology-specific .roo/rules/rules.md with global rules
 - Create specialized PRP commands for the technology
 - Develop domain-specific base PRP template
 - Include working examples and comprehensive documentation

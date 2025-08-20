@@ -21,7 +21,7 @@ Template optimized for AI agents to generate complete context engineering templa
 
 Generate a complete context engineering template package for **[TARGET_TECHNOLOGY]** that includes:
 
-- Domain-specific .roo/rules-code/rules.md implementation guide
+- Domain-specific .roo/rules/rules.md implementation guide
 - Specialized PRP generation and execution commands
 - Technology-appropriate base PRP template
 - Comprehensive examples and documentation
@@ -43,7 +43,7 @@ Generate a complete context engineering template package for **[TARGET_TECHNOLOG
 ```
 use-cases/{technology-name}/
 ├── .roo/
-│   ├── rules-code/
+│   ├── rules/
 │   │   └── rules.md                            # Domain implementation guide
 │   ├── commands/
 │   │   ├── generate-{technology}-prp.md        # Domain PRP generation
@@ -101,7 +101,7 @@ use-cases/{technology-name}/
   why: Base PRP template structure to specialize for domain
 
 # MCP SERVER EXAMPLE - Reference implementation of domain specialization
-- file: ../mcp-server/.roo/rules-code/rules.md
+- file: ../mcp-server/.roo/rules/rules.md
   why: Example of domain-specific implementation guide patterns
 
 - file: ../mcp-server/.roo/commands/prp-mcp-create.md
@@ -135,7 +135,7 @@ context-engineering-intro/
 ├── README.md                                # Core principles to adapt
 ├── .roo/
 │   ├── commands/                            # Base commands to specialize
-│   └── rules-code/
+│   └── rules/
 │       └── rules.md                         # Base rules to inherit
 ├── PRPs/
 │   └── templates/
@@ -257,7 +257,7 @@ Research Task 3 - Best Practices Investigation (WEB SEARCH REQUIRED):
 Research Task 4 - Template Package Structure Planning:
   PLAN how to create context engineering template for this technology:
     - How to adapt PRP framework for this specific technology
-    - What domain-specific .roo/rules-code/rules.md rules are needed
+    - What domain-specific .roo/rules/rules.md rules are needed
     - What validation loops are appropriate for this framework
     - What examples and documentation should be included
 ```
@@ -275,7 +275,7 @@ Generation Task 1 - Create Template Directory Structure:
     - examples/ subdirectory
     - All other required subdirectories per template package requirements
 
-Generation Task 2 - Generate Domain-Specific .roo/rules-code/rules.md:
+Generation Task 2 - Generate Domain-Specific .roo/rules/rules.md:
   CREATE technology-specific global rules file:
     - Technology-specific tooling and package management commands
     - Framework architectural patterns and conventions from web research
@@ -307,7 +307,7 @@ Generation Task 6 - Create Template Copy Script:
   CREATE Python script for template deployment:
     - copy_template.py script that accepts target directory argument
     - Copies entire template directory structure to specified location
-    - Includes all files: .roo/rules-code/rules.md, commands, PRPs, examples, etc.
+    - Includes all files: .roo/rules/rules.md, commands, PRPs, examples, etc.
     - Handles directory creation and file copying with error handling
     - Simple command-line interface for easy usage
 
@@ -328,7 +328,7 @@ Generation Task 7 - Generate Comprehensive README:
 # Essential copy script functionality:
 # 1. Accept target directory as command line argument
 # 2. Copy entire template directory structure to target location
-# 3. Include ALL files: .roo/rules-code/rules.md, .roo/, PRPs/, examples/, README.md
+# 3. Include ALL files: .roo/rules/rules.md, .roo/, PRPs/, examples/, README.md
 # 4. Handle directory creation and error handling
 # 5. Provide clear success feedback with next steps
 # 6. Simple usage: python copy_template.py /path/to/target
@@ -467,7 +467,7 @@ grep -r "{technology-specific}" . | wc -l  # Should have specializations
 ```bash
 # Verify integration with base context engineering framework
 diff -r ../../.roo/commands/ .roo/commands/ | head -20
-diff ../../.roo/rules-code/rules.md .roo/rules-code/rules.md | head -20
+diff ../../.roo/rules/rules.md .roo/rules/rules.md | head -20
 
 # Test template produces working results
 cd examples/
@@ -482,7 +482,7 @@ cd examples/
 ### Template Package Completeness
 
 - [ ] Complete directory structure: `tree use-cases/{technology-name}`
-- [ ] All required files present: .roo/rules-code/rules.md, commands, base PRP, examples
+- [ ] All required files present: .roo/rules/rules.md, commands, base PRP, examples
 - [ ] Copy script present: `copy_template.py` with proper functionality
 - [ ] README comprehensive: Includes copy script instructions and PRP workflow
 - [ ] Domain-specific content: Technology patterns accurately represented

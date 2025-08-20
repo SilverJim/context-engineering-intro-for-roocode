@@ -193,7 +193,7 @@ def validate_template_integrity(target_dir: Path) -> bool:
         True if template appears complete, False otherwise
     """
     essential_files = [
-        ".roo/rules-code/rules.md",
+        ".roo/rules/rules.md",
         "README_TEMPLATE.md",
         ".roo/commands/prp-mcp-create.md",
         ".roo/commands/prp-mcp-execute.md",
@@ -259,7 +259,7 @@ def print_next_steps(target_dir: Path) -> None:
 
 6. Read the documentation:
    # Check README_TEMPLATE.md for complete usage guide
-   # Check .roo/rules-code/rules.md for MCP development rules
+   # Check .roo/rules/rules.md for MCP development rules
 
 🔗 Useful Resources:
    - MCP Specification: https://spec.modelcontextprotocol.io/

@@ -21,7 +21,7 @@ Generate a complete context engineering template package for **PydanticAI** that
 
 Generate a complete context engineering template package for **PydanticAI** that includes:
 
-- PydanticAI-specific .roo/rules-code/rules.md implementation guide with agent patterns
+- PydanticAI-specific .roo/rules/rules.md implementation guide with agent patterns
 - Specialized PRP generation and execution commands for AI agents
 - Domain-specific base PRP template with agent architecture patterns
 - Comprehensive working examples (chat agents, tool integration, multi-step workflows)
@@ -43,7 +43,7 @@ Generate a complete context engineering template package for **PydanticAI** that
 ```
 use-cases/pydantic-ai/
 ├── .roo/
-│   ├── rules-code/
+│   ├── rules/
 │   │   └── rules.md                            # PydanticAI implementation guide
 │   ├── commands/
 │   │   ├── generate-pydantic-ai-prp.md         # Agent PRP generation
@@ -136,7 +136,7 @@ use-cases/pydantic-ai/
   why: Base PRP template structure to specialize for PydanticAI domain
 
 # MCP SERVER EXAMPLE - Reference implementation
-- file: ../mcp-server/.roo/rules-code/rules.md
+- file: ../mcp-server/.roo/rules/rules.md
   why: Example of domain-specific implementation guide patterns
   
 - file: ../mcp-server/.roo/commands/prp-mcp-create.md
@@ -364,7 +364,7 @@ Generation Task 1 - Create PydanticAI Template Directory Structure:
     - examples/ with working agent implementations
     - All subdirectories per template package requirements
 
-Generation Task 2 - Generate PydanticAI-Specific .roo/rules-code/rules.md:
+Generation Task 2 - Generate PydanticAI-Specific .roo/rules/rules.md:
   CREATE PydanticAI global rules file including:
     - PydanticAI agent creation and tool integration patterns
     - Model provider configuration and API key management
@@ -400,7 +400,7 @@ Generation Task 6 - Create Template Copy Script:
   CREATE Python script for template deployment:
     - copy_template.py with command-line interface
     - Copies entire PydanticAI template structure to target location
-    - Handles all files: .roo/rules-code/rules.md, commands, PRPs, examples, etc.
+    - Handles all files: .roo/rules/rules.md, commands, PRPs, examples, etc.
     - Error handling and success feedback with next steps
 
 Generation Task 7 - Generate Comprehensive README:
@@ -555,7 +555,7 @@ grep -r "pytest" examples/testing_examples/ | wc -l  # Should have tests
 ### PydanticAI Template Package Completeness
 
 - [ ] Complete directory structure: `tree use-cases/pydantic-ai`
-- [ ] PydanticAI-specific files: .roo/rules-code/rules.md with agent patterns, specialized commands
+- [ ] PydanticAI-specific files: .roo/rules/rules.md with agent patterns, specialized commands
 - [ ] Copy script present: `copy_template.py` with proper PydanticAI functionality
 - [ ] README comprehensive: Includes agent development workflow and copy instructions
 - [ ] Agent examples working: All examples use real PydanticAI code patterns

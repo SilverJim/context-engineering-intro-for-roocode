@@ -221,7 +221,7 @@ To fully understand this use case, examine these files:
 
 - **`wrangler.jsonc`** - Cloudflare Workers configuration
 - **`.dev.vars.example`** - Environment variable template
-- **`.roo/rules-code/rules.md`** - Implementation guidelines and patterns
+- **`.roo/rules/rules.md`** - Implementation guidelines and patterns
 
 ## 📈 Success Metrics
 

@@ -101,7 +101,7 @@ wrangler types         # Generate TypeScript types from Worker configuration
 ├── package.json                # npm dependencies & scripts
 ├── tsconfig.json               # TypeScript configuration
 ├── .roo/                        # Product Requirement Prompts
-│   └── rules-code/
+│   └── rules/
 │       └── rules.md                   # This implementation guide
 └── worker-configuration.d.ts   # Generated Cloudflare types
 ```

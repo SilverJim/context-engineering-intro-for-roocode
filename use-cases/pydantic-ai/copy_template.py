@@ -33,7 +33,7 @@ def get_template_files() -> List[Tuple[str, str]]:
     
     # Core template files
     core_files = [
-        ".roo/rules-code/rules.md",
+        ".roo/rules/rules.md",
         "README.md",
     ]
     
@@ -135,7 +135,7 @@ def validate_template_integrity(target_dir: Path) -> bool:
         True if template appears complete, False otherwise
     """
     essential_files = [
-        ".roo/rules-code/rules.md",
+        ".roo/rules/rules.md",
         "README_TEMPLATE.md",
         ".roo/commands/generate-pydantic-ai-prp.md",
         ".roo/commands/execute-pydantic-ai-prp.md",
@@ -188,7 +188,7 @@ def print_next_steps(target_dir: Path) -> None:
 
 5. Read the documentation:
    # Check README.md for complete usage guide
-   # Check .roo/rules-code/rules.md for PydanticAI development rules
+   # Check .roo/rules/rules.md for PydanticAI development rules
 
 🔗 Useful Resources:
    - PydanticAI Docs: https://ai.pydantic.dev/
